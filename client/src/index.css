@@ -1,0 +1,121 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 120 15% 85%;
+
+    --card: 8 15% 10%;
+    --card-foreground: 120 15% 85%;
+
+    --popover: 8 15% 10%;
+    --popover-foreground: 120 15% 85%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 8 12% 8%;
+
+    --secondary: 8 15% 15%;
+    --secondary-foreground: 120 15% 85%;
+
+    --muted: 8 15% 15%;
+    --muted-foreground: 120 10% 60%;
+
+    --accent: 142 76% 25%;
+    --accent-foreground: 120 15% 85%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 8 15% 20%;
+    --input: 8 15% 15%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.5rem;
+
+    --vintage-green: 142 60% 15%;
+    --dark-green: 142 76% 20%;
+    --mystery-green: 142 40% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-black text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  .hero-video {
+    filter: brightness(0.7) contrast(1.1);
+  }
+
+  .content-overlay {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+  }
+
+  .card-hover-wave {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover-wave:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.25);
+  }
+
+  .wave-transition {
+    background: linear-gradient(45deg, transparent 30%, rgba(34, 197, 94, 0.1) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: wave 500s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .horizontal-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .arrow-hover-bg {
+    background: linear-gradient(45deg, transparent 30%, rgba(34, 197, 94, 0.5) 50%, transparent 70%);
+    background-size: 200% 200%;
+    animation: wave 2s ease-in-out infinite;
+  }
+}
+
+@layer components {
+  .content-card {
+    @apply bg-card/40 backdrop-blur-sm border border-border/30 rounded-lg overflow-hidden;
+    @apply transition-all duration-300;
+  }
+
+  .content-card:hover {
+    @apply bg-card/80 border-primary/50 shadow-lg shadow-primary/20;
+  }
+
+  .content-card:hover .play-button {
+    @apply scale-110;
+  }
+
+  .play-button {
+    @apply bg-primary hover:bg-primary/80 text-primary-foreground;
+    @apply rounded-full p-3 transition-all duration-200;
+    @apply hover:scale-110 active:scale-95;
+  }
+
+  .section-title {
+    @apply text-xs font-thin text-white mb-1 uppercase tracking-wider;
+  }
+}
