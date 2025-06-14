@@ -1,0 +1,71 @@
+Web Series data: {title: 'ddddd', selectedGenres: Array(1), seasons: Array(1)}
+UploadContentTab.tsx:43 Form submitted with data: {title: 'ddddd', contentType: 'Web Series', selectedGenres: Array(1), seasons: Array(1)}
+useContentUpload.ts:120 Uploading web series: {title: 'ddddd', selectedGenres: Array(1), seasons: Array(1)}
+useContentUpload.ts:193 Web series result: {content_id: '7d278f99-00c9-4955-b9d9-020791a9dca9', season_id_list: Array(1), created_at: '2025-06-13T12:28:16.041759+00:00', updated_at: '2025-06-13T12:28:16.041759+00:00'}
+requests.js:1 
+            
+            
+           POST https://kxlqebcjpefqtbwdxdss.supabase.co/rest/v1/upload_content?columns=%22title%22%2C%22content_type%22%2C%22genre%22%2C%22content_id%22&select=* 409 (Conflict)
+s.fetch @ requests.js:1
+(anonymous) @ chrome-extension://e…cutors/traffic.js:1
+fetch @ chrome-extension://e…cutors/traffic.js:1
+(anonymous) @ @supabase_supabase-js.js?v=fb7de2d3:3943
+(anonymous) @ @supabase_supabase-js.js?v=fb7de2d3:3964
+fulfilled @ @supabase_supabase-js.js?v=fb7de2d3:3916
+Promise.then
+step @ @supabase_supabase-js.js?v=fb7de2d3:3929
+(anonymous) @ @supabase_supabase-js.js?v=fb7de2d3:3931
+__awaiter6 @ @supabase_supabase-js.js?v=fb7de2d3:3913
+(anonymous) @ @supabase_supabase-js.js?v=fb7de2d3:3954
+then @ @supabase_supabase-js.js?v=fb7de2d3:89Understand this error
+useContentUpload.ts:209 Upload result: null
+useContentUpload.ts:211 Upload error: {code: '23503', details: 'Key is not present in table "movie".', hint: null, message: 'insert or update on table "upload_content" violates foreign key constraint "fk_upload_content_movie"'}
+mutationFn @ useContentUpload.ts:211
+await in mutationFn
+fn @ @tanstack_react-query.js?v=fb7de2d3:1189
+run @ @tanstack_react-query.js?v=fb7de2d3:494
+start @ @tanstack_react-query.js?v=fb7de2d3:536
+execute @ @tanstack_react-query.js?v=fb7de2d3:1225
+await in execute
+mutate @ @tanstack_react-query.js?v=fb7de2d3:2630
+(anonymous) @ @tanstack_react-query.js?v=fb7de2d3:3295
+handleFormSuccess @ UploadContentTab.tsx:48
+handleSubmit @ WebSeriesForm.tsx:144
+callCallback2 @ chunk-UPELNCPK.js?v=fb7de2d3:3674
+invokeGuardedCallbackDev @ chunk-UPELNCPK.js?v=fb7de2d3:3699
+invokeGuardedCallback @ chunk-UPELNCPK.js?v=fb7de2d3:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-UPELNCPK.js?v=fb7de2d3:3736
+executeDispatch @ chunk-UPELNCPK.js?v=fb7de2d3:7014
+processDispatchQueueItemsInOrder @ chunk-UPELNCPK.js?v=fb7de2d3:7034
+processDispatchQueue @ chunk-UPELNCPK.js?v=fb7de2d3:7043
+dispatchEventsForPlugins @ chunk-UPELNCPK.js?v=fb7de2d3:7051
+(anonymous) @ chunk-UPELNCPK.js?v=fb7de2d3:7174
+batchedUpdates$1 @ chunk-UPELNCPK.js?v=fb7de2d3:18913
+batchedUpdates @ chunk-UPELNCPK.js?v=fb7de2d3:3579
+dispatchEventForPluginEventSystem @ chunk-UPELNCPK.js?v=fb7de2d3:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-UPELNCPK.js?v=fb7de2d3:5478
+dispatchEvent @ chunk-UPELNCPK.js?v=fb7de2d3:5472
+dispatchDiscreteEvent @ chunk-UPELNCPK.js?v=fb7de2d3:5449Understand this error
+useContentUpload.ts:225 Error uploading web series: {code: '23503', details: 'Key is not present in table "movie".', hint: null, message: 'insert or update on table "upload_content" violates foreign key constraint "fk_upload_content_movie"'}
+onError @ useContentUpload.ts:225
+execute @ @tanstack_react-query.js?v=fb7de2d3:1254
+await in execute
+mutate @ @tanstack_react-query.js?v=fb7de2d3:2630
+(anonymous) @ @tanstack_react-query.js?v=fb7de2d3:3295
+handleFormSuccess @ UploadContentTab.tsx:48
+handleSubmit @ WebSeriesForm.tsx:144
+callCallback2 @ chunk-UPELNCPK.js?v=fb7de2d3:3674
+invokeGuardedCallbackDev @ chunk-UPELNCPK.js?v=fb7de2d3:3699
+invokeGuardedCallback @ chunk-UPELNCPK.js?v=fb7de2d3:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-UPELNCPK.js?v=fb7de2d3:3736
+executeDispatch @ chunk-UPELNCPK.js?v=fb7de2d3:7014
+processDispatchQueueItemsInOrder @ chunk-UPELNCPK.js?v=fb7de2d3:7034
+processDispatchQueue @ chunk-UPELNCPK.js?v=fb7de2d3:7043
+dispatchEventsForPlugins @ chunk-UPELNCPK.js?v=fb7de2d3:7051
+(anonymous) @ chunk-UPELNCPK.js?v=fb7de2d3:7174
+batchedUpdates$1 @ chunk-UPELNCPK.js?v=fb7de2d3:18913
+batchedUpdates @ chunk-UPELNCPK.js?v=fb7de2d3:3579
+dispatchEventForPluginEventSystem @ chunk-UPELNCPK.js?v=fb7de2d3:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-UPELNCPK.js?v=fb7de2d3:5478
+dispatchEvent @ chunk-UPELNCPK.js?v=fb7de2d3:5472
+dispatchDiscreteEvent @ chunk-UPELNCPK.js?v=fb7de2d3:5449Understand this error
